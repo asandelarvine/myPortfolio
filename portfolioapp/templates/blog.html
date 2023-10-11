@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block page_content %}
+
+
+<style>
+
+.container {
+        
+        padding-left: 300px;
+        background: white;
+        display: inline-block;
+        margin: 150px auto;
+      }
+      h1{
+          text-align: center;
+          font-weight:bolder;
+          color:#000000;
+          font-family: 'Joti One';
+          font-size: 35px;
+      }
+</style>
+
+<div class="container">
+<div class="col-md-8 offset-md-2">
+    <h1>My blogs</h1>
+    <hr> {% for blog in blogs %}
+    <h2><a target="_blank" href={{ blog.link}}>{{ blog.title }}</a></h2>
+    <small>
+        {{ blog.published_on.date }}
+    </small>
+    <hr> {% endfor %}
+
+</div>
+</div>
+<a href="/portfolioapp" style="background-color: #0f1c1b; font-size: 15px; text-align: center;">Go to home page</a>
+
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% load static %}
+
+<nav>
+
+<style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: teal;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-size: 15px;
+    padding: 2%;
+}
+
+li a {
+    display: block;
+    color: #ffffff;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a.active:hover {
+    background-color: #0f1c1b;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #0f1c1b;
+    color: white;
+}
+
+/* social-icons */
+.socials{
+    padding: 20px;
+    background-color: teal;
+    line-height: 10px;
+    font-size: 28px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 30%;
+    position: relative;
+    overflow: hidden;
+    /* border: 4px solid #0f1c1b; */
+    z-index: 1;
+    
+}
+.socials .icon{
+    position: relative;
+    color: #e5eae5;
+    transition: .5s;
+    z-index: 3;
+}
+
+.socials :hover .icon{
+    color: #fff;
+    transform: rotateY(360deg);
+
+}
+
+.socials :before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f1c1b;
+    transition: .5s;
+    z-index: 2;
+}
+
+.socials :hover:before{
+    top: 0;
+}
+
+
+
+
+
+
+</style>
+
+
+    <ul>
+
+        <div class="profile-pic">
+            <h2 style="text-align: center; font-size: 15px; color: white; font-family: 'Joti One';" >Asande Larvine Moraa</h2>
+            <br><br>
+           
+           
+            <img src="/static/images/larv.jpeg" alt="" width="100" >
+            <br><br>
+            <p>Hi, my name is Larvine Asande and I'm a junior software developer. 
+                <br> Welcome to my personal website!</p>
+        </div>
+        <br><br>
+
+        <a href="https://docs.google.com/document/d/1z88IbQ40YbUE8bkXgFeiLtpC2OG2UKQ1AHk6hEmUImU/edit?usp=sharing" style="background-color: #0f1c1b;">CIRRICULM VITAE</a>
+
+      <li><a class="active" href="/portfolioapp">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="/portfolioapp/blogs">Blogs</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experiences">Experiences</a></li>       
+      <li><a href="#contact">Contact</a></li>
+      
+      
+      <br><br>
+
+      <div class="socials"  >
+          
+        <a href={{profile.github_link}} class="instagran"><i class="fa fa-github icon" ></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href={{profile.linkedin_link}} class="linkedin"><i class="fa fa-linkedin icon"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <a href=mailto:{{profile.email}} class="gmail"><i class="fa fa-envelope"></i> Gmail </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        <br>
+        <!-- <i class="fa fa-phone" aria-hidden="true">: {{profile.phone_number}}</i> -->
+
+    </div>
+    </ul>
+
+</nav>
