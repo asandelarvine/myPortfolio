@@ -47,7 +47,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = True
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
-ALLOWED_HOSTS=['.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS=['*']
 
 
 
